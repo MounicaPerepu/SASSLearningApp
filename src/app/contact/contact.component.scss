@@ -1,0 +1,58 @@
+@import '../config';
+@import '../app.component.scss';
+@import '../menu';
+
+.contact {
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: 
+    linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+    ),
+    url('../../assets/img/model-1.jpg') center top;
+    background-size: cover;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .social-icons {
+        position: initial;
+        margin-top: 2rem;
+        bottom: 1rem;
+        left: 1rem;
+
+        a {
+            padding: 0.4rem;
+            @include transition-ease;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    footer {
+        font-size: 1rem;
+        position: fixed;
+        bottom: 0.4rem;
+        right: 1rem;
+        text-align: right;
+        padding: 1rem;
+        color: set-text-color($primary-color);
+    }
+}
